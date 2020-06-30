@@ -20,6 +20,9 @@
   <!-- Custom styles for this template-->
   <link href="assets/css/style2.min.css" rel="stylesheet">
 
+  <!-- Custom styles for this page -->
+  <link href="assets/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
 </head>
 
 <body id="page-top">
@@ -164,7 +167,7 @@
       <div id="content">
 
         <!-- Topbar -->
-        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow br-darkskyblue">
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-2 static-top shadow br-darkskyblue">
 
           <!-- Sidebar Toggle (Topbar) -->
           <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -203,12 +206,83 @@
         <!-- End of Topbar -->
 
         <!-- Begin Page Content -->
-        <div class="container-fluid">
+        <div class="container-fluid" style="overflow-y: auto;height: 80vh">
 
-          <!-- Page Heading -->
-          <h1 class="h3 mb-4 text-center text-gray-800">
-            <img src="assets/img/giphy.gif">
-          </h1>
+          <!-- DataTales Example -->
+          <div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold text-primary">Add Plant</h6>
+            </div>
+            <div class="card-body py-1">
+              <div class="row mx-0 bg-light my-2">
+                <div class="col-md-8">
+                  <div class="form-group">
+                    <label class="d-block"><b>Plant Name *</b></label>
+                    <input type="text" class="form-control-sm" name=""> 
+                    <button class="btn btn-info">Update</button>
+                  </div>
+                </div>
+              </div>
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th>Id</th>
+                      <th>Name</th>
+                      <th>Status</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <!-- <tfoot>
+                    <tr>
+                      <th>Id</th>
+                      <th>Name</th>
+                      <th>Status</th>
+                      <th>Action</th>
+                    </tr>
+                  </tfoot> -->
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>
+                        <input type="text" class="form-control-sm" name="" value="Riyadh">
+                        <button class="btn btn-info btn-sm" type="submit">Update</button>
+                      </td>
+                      <td><span class="badge badge-success btn-sm">active</span></td>
+                      <td><button class="btn btn-default"><i class="fas fa-times fa-sm fa-fw" style="color: red;"></i></button></td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>
+                        <input type="text" class="form-control-sm" name="" value="Riyadh">
+                        <button class="btn btn-info btn-sm" type="submit">Update</button>
+                      </td>
+                      <td><span class="badge badge-success btn-sm">active</span></td>
+                      <td><button class="btn btn-default"><i class="fas fa-times fa-sm fa-fw" style="color: red;"></i></button></td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>
+                        <input type="text" class="form-control-sm" name="" value="Riyadh">
+                        <button class="btn btn-info btn-sm" type="submit">Update</button>
+                      </td>
+                      <td><span class="badge badge-success btn-sm">active</span></td>
+                      <td><button class="btn btn-default"><i class="fas fa-times fa-sm fa-fw" style="color: red;"></i></button></td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>
+                        <input type="text" class="form-control-sm" name="" value="Riyadh">
+                        <button class="btn btn-info btn-sm" type="submit">Update</button>
+                      </td>
+                      <td><span class="badge badge-success btn-sm">active</span></td>
+                      <td><button class="btn btn-default"><i class="fas fa-times fa-sm fa-fw" style="color: red;"></i></button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
 
         </div>
         <!-- /.container-fluid -->
@@ -217,7 +291,7 @@
       <!-- End of Main Content -->
 
       <!-- Footer -->
-      <footer class="sticky-footer bg-white">
+      <footer class="sticky-footer bg-white" style="border-top: 3px solid #e22d18a8;border-radius: 7px;border-bottom: 3px solid #e22d18a8;">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
             <span>Copyright &copy; RGR Moda 2020</span>
@@ -265,6 +339,13 @@
 
   <!-- Custom scripts for all pages-->
   <script src="assets/js/script2.min.js"></script>
+
+   <!-- Page level plugins -->
+  <script src="assets/vendor/datatables/jquery.dataTables.min.js"></script>
+  <script src="assets/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="assets/js/demo/datatables-demo.js"></script>
 
 </body>
 
